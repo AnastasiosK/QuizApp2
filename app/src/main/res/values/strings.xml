@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">QuizApp2</string>
+    <string name="Questionone">Which of the following is the King of the Landing in season 1?</string>
+    <string name="Questiontwo">Is the following actress part of the Lannister house?</string>
+    <string name="Questionthree">Which of the following names is/are kids to the house of Greyjoy</string>
+    <string name="Questionfour">Which of the following men is Ned Stark the lord of House Stark</string>
+    <string name="Questionfive">Please write the name of the targaryan queen</string>
+</resources>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    android:background="@mipmap/gotbackground"
+    android:scaleType="centerCrop"
+    tools:context="com.example.android.quizapp2.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Firstquestionlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First question"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:textSize="24sp"/>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:background="@mipmap/baratheontwo">
+
+            <ImageView
+                android:id="@+id/Baratheonsymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/baratheon" />
+
+            <TextView
+                android:id="@+id/Firstquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/Baratheonsymbol"
+                android:fontFamily="serif"
+                android:text="@string/Questionone"
+                android:textColor="@android:color/white" />
+
+            <RadioGroup
+                android:id="@+id/Radiogroup"
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Firstquestion"
+                android:layout_toRightOf="@+id/Baratheonsymbol">
+
+                <RadioButton
+                    android:id="@+id/radiobuttoncorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffd700"
+                    android:text="Robert Baratheon"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffd700"
+                    android:text="John Snow"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffd700"
+                    android:text="Daenerys Targaryen"
+                    android:textColor="@android:color/white" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#ffd700"
+                    android:text="Cersei Lannister"
+                    android:textColor="@android:color/white" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/photosfq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/Firstquestionfirstimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/robert"/>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/Firstquestionsecondimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/jonsnow"/>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/Firstquestionthirdimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/daenerys"/>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/Firstquestionfourthimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cersei"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Second question"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"/>
+
+        <RelativeLayout
+            android:scaleType="centerInside"
+            android:layout_margin="24dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/lanisterbackground">
+
+            <ImageView
+                android:id="@+id/Lanisetersymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/lanister"/>
+            <TextView
+                android:id="@+id/Secondquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Questiontwo"
+                android:fontFamily="serif"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@+id/Lanisetersymbol"/>
+            <ImageView
+                android:id="@+id/photosq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/daenerys"
+                android:layout_below="@+id/Secondquestion"
+                android:layout_toRightOf="@+id/Lanisetersymbol"
+                android:layout_margin="16dp"/>
+            <EditText
+                android:id="@+id/Firstedittext"
+                android:layout_below="@+id/photosq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter Yes or No"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:textColorHighlight="@android:color/white"
+                android:ems="10"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Third question"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"/>
+
+        <RelativeLayout
+            android:scaleType="centerInside"
+            android:layout_margin="24dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/housegreyjoy">
+
+            <ImageView
+                android:id="@+id/greyjoysymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/greyjoy"/>
+            <TextView
+                android:id="@+id/thirdquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Questionthree"
+                android:fontFamily="serif"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@+id/greyjoysymbol"/>
+            <LinearLayout
+                android:layout_margin="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/thirdquestion"
+                android:layout_toRightOf="@+id/greyjoysymbol">
+                <CheckBox
+                    android:buttonTint="@android:color/white"
+                    android:layout_below="@+id/thirdquestion"
+                    android:id="@+id/checkboxOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Theon"
+                    android:textColor="@android:color/white"/>
+                <CheckBox
+                    android:buttonTint="@android:color/white"
+                    android:layout_below="@+id/thirdquestion"
+                    android:id="@+id/checkboxTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yara"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/photossq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/Secondquestionfirstimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/theon"/>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/Secondquestionthirdimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/yara"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fourth question"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"/>
+
+        <RelativeLayout
+            android:scaleType="centerInside"
+            android:layout_margin="24dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/housestark">
+
+            <ImageView
+                android:id="@+id/starksymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/stark"/>
+            <TextView
+                android:id="@+id/fourthquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Questionfour"
+                android:fontFamily="serif"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@+id/starksymbol"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:layout_below="@id/starksymbol">
+                <CheckBox
+                    android:buttonTint="@android:color/white"
+                    android:id="@+id/robb"
+                    android:layout_weight="1"
+                    android:scaleX="0.90"
+                    android:scaleY="0.90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/robbstark"/>
+                <CheckBox
+                    android:buttonTint="@android:color/white"
+                    android:id="@+id/eddardstark"
+                    android:layout_weight="1"
+                    android:scaleX="0.90"
+                    android:scaleY="0.90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/eddard"/>
+                <CheckBox
+                    android:buttonTint="@android:color/white"
+                    android:id="@+id/hound"
+                    android:layout_weight="1"
+                    android:scaleX="0.90"
+                    android:scaleY="0.90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/hound"/>
+                <CheckBox
+                    android:buttonTint="@android:color/white"
+                    android:id="@+id/littlefinger"
+                    android:layout_weight="1"
+                    android:scaleX="0.90"
+                    android:scaleY="0.90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/littlefinger"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fifth question"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:textSize="24sp"/>
+
+        <RelativeLayout
+            android:scaleType="centerInside"
+            android:layout_margin="24dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/housetarg">
+
+            <ImageView
+                android:id="@+id/targaryansymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/targeryan"/>
+            <TextView
+                android:id="@+id/fifthhquestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Questionfive"
+                android:fontFamily="serif"
+                android:textColor="@android:color/white"
+                android:layout_toRightOf="@+id/targaryansymbol"/>
+            <ImageView
+                android:id="@+id/photofq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/daenerys"
+                android:layout_below="@+id/fifthhquestion"
+                android:layout_toRightOf="@+id/targaryansymbol"
+                android:layout_margin="16dp"/>
+
+            <EditText
+                android:id="@+id/last_edittext"
+                android:layout_below="@+id/photofq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter the name only small letters"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="8dp"
+                android:textColorHighlight="@android:color/white"
+                android:ems="10"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/Submitbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center"
+            android:onClick="getScore"/>
+    </LinearLayout>
+</ScrollView>
